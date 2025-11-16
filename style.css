@@ -12,6 +12,7 @@
   --text-primary:#1e100b;
   --white-text:#f0f0f0;
   --card-bg:#fbf4e8;
+  --shade-text:#484747;
 }
 body{
   background-color: var(--bg-back);
@@ -76,10 +77,11 @@ nav ul li a:hover{
 
 /*----------hero-section--------------*/
 
-#hero-sec{
+#home{
   padding: 0 3em;
   width: 100%;
   height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,6 +210,11 @@ nav ul li a:hover{
   font-size: 19px;
   font-weight: 600;
 }
+.dish-tag{
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--shade-text);
+}
 .order-btn{
   background-color: var(--crips-orange);
   text-decoration: none;
@@ -225,3 +232,98 @@ nav ul li a:hover{
   transform: scale(0.9);
 }
 
+/*-------why section-------*/
+#whyus{
+  margin-top:150px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f7ebdf,#fcf4e9);
+  padding: 0 5em;
+}
+.why-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 5em 0;
+}
+.choose-context{
+  padding-right: 10px;
+}
+.choose-context h3{
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.choose-context p{
+  max-width: 550px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--shade-text);
+  margin-bottom: 50px;
+}
+.feature-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+}
+.feature-card{
+  background-color: #fbf4ee;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.feature-card:first-child{
+  background-color: #f9f0e6de;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.feature-card:hover{
+  background-color: #f9f0e6de;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.feature-img{
+  width: 60px;
+  height: 60px;
+}
+.feature-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.feature-card h4{
+  font-size: 15px;
+  font-weight: 600;
+}
+.feature-card p{
+  color: var(--shade-text);
+  font-size: 14px;
+}
+.star{
+  width: 50px;
+  opacity: 0.8;
+}
+/*------------Menu Setion------------*/
+#menu{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  padding: 0 5em;
+}
+.menu-header{
+  padding-top: 50px;
+  text-align: center;
+}
+.menu-head{
+  
+}
