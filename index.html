@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Briyani Hub</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
 </head>
   <body>
     <header id="nav-sec">
-        <a href="#home" class="brand-logo">Briyani <span class="hub">Hub</span></a>
-        <nav>
+        <a href="#home" class="brand-logo">Biryani <span class="hub">Hub</span></a>
+
+        <nav class="desktop-nav">
             <ul class="nav-list">
                 <li><a class="nav-link" href="#home">Home</a></li>
                 <li><a class="nav-link" href="#menu">Menu</a></li>
@@ -22,25 +23,52 @@
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
+
         <div class="header-action">
-            <a href="#home" class="signup">Sign Up</a>
+            <a href="#order" class="order-btn">Order Now</a>
+            <a href="#signup" class="signup">Sign Up</a>
+            <span id="hamburger" class="hamburger"><i class="fa-solid fa-bars"></i></span>
         </div>
     </header>
+    <div id="mobile-menu" class="mobile-menu">
+        <span id="close-menu" class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+
+        <ul class="mobile-list">
+            <li><a class="mobile-link" href="#home">Home</a></li>
+            <li><a class="mobile-link" href="#menu">Menu</a></li>
+            <li><a class="mobile-link" href="#special">Special</a></li>
+            <li><a class="mobile-link" href="#about">About</a></li>
+            <li><a class="mobile-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
     <main>
         <section id="home">
-            <div class="hero-context">
-                <p class="tag">Hungry?</p>
-                <h1 class="headline">Step into<br>ZestyBite — Taste the Flavour of Royal Dum!</h1>
-                <p class="subhead">Slow-cooked in authentic dum style with aged basmati rice, premium spices, and saffron. A royal plate, every single time.</p>
-                <div class="order-sec">
-                    <a href="#order" class="cta order">Order Now</a>
-                    <a href="#explore" class="cta explore">Explore More</a>
+            <div class="hero-container">
+                
+                <div class="hero-context">
+                    <p class="tag">Hungry?</p>
+                    <h1 class="headline">
+                        Step Into Biryani<span class="hub">Hub</span><br>
+                        <span class="highlight">Taste Royal Dum Perfection</span>
+                    </h1>
+                    <p class="subhead">
+                        Slow-cooked in traditional dum style with aged basmati, saffron, and hand-picked spices — rich flavour in every bite.
+                    </p>
+                    <div class="order-sec">
+                        <a href="#order" class="cta order">Order Now</a>
+                        <a href="#menu" class="cta explore">Explore Menu</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image-sec">
-                <img src="Resource/afghani chicken briyani.jpg" class="hero-img" alt="Hero briyani">
+
+                <div class="hero-image-sec">
+                    <img src="Resource/afghani chicken briyani.jpg" class="hero-img" alt="Biryani Image">
+                </div>
+
             </div>
         </section>
+
         <section id="special">
             <div class="special-heading">
                 <h2 class="special-head">Our Special Briyani</h2>
@@ -339,5 +367,26 @@
             </div>
         </footer>
     </main>
+    <script>
+        const menu = document.getElementById("mobile-menu");
+        const openBtn = document.getElementById("hamburger");
+        const closeBtn = document.getElementById("close-menu");
+        const overlay = document.getElementById("overlay");
+
+        openBtn.addEventListener("click", () => {
+            menu.classList.add("open");
+            overlay.classList.add("show");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove("open");
+            overlay.classList.remove("show");
+        });
+
+        overlay.addEventListener("click", () => {
+            menu.classList.remove("open");
+            overlay.classList.remove("show");
+        });
+    </script>
   </body>
 </html>
